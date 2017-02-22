@@ -50,5 +50,5 @@ if (navigator.geolocation) {
         });
     };
 } else {
-    alert('Sorry! Your browser does not support geolocation.');
+    alert('Sorry! Your browser does not support geolocation. Please use the search box.');
 }

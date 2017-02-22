@@ -31,9 +31,15 @@ function getTides(lat, lon) {
         var liImage = document.createElement('li');
         liImage.appendChild(image);
         ul.appendChild(liImage);
+
         var liType = document.createElement('li');
+        liType.innerText = extreme.type;
         ul.appendChild(liType);
-        liType.innerText = extreme.height;
+
+        var liHeight = document.createElement('li');
+        liHeight.innerText = extreme.height;
+        ul.appendChild(liHeight);
+
         var liDate =document.createElement('li');
         liDate.innerText = extreme.date;
         ul.appendChild(liDate);

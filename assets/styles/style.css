@@ -77,12 +77,17 @@ input.placeholder {
   width: 100%;
 }
 
-#spinner {
-  margin: 0 auto;
+.spinner-container {
+  display: flex;
+}
+
+.spinner {
+  justify-content: center;
+  align-items: center;
 }
 
 .info p{
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 300;
   margin-bottom: 3em;
 }
