@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: #ecf0f1;
+  background-image: -webkit-linear-gradient(rgba(41, 128, 185, 0.7), rgba(41, 128, 185, 0.7)), url(beach-sand-blue-ocean.jpg);
+  background-image: linear-gradient(rgba(41, 128, 185, 0.7), rgba(41, 128, 185, 0.7)), url(beach-sand-blue-ocean.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.tide-checker {
+  height: 100vh;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  margin-bottom: 20px;
+  color: #d35400;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  height: 60px;
+  font-size: 40px;
+  font-weight: lighter;
+  color: #34495e;
+}
+
+input.placeholder {
+    text-align: center;
+}
+
+#tides li{
+  list-style: none;
+}
+
+.tide {
+  display: flex;
+}
+
+.tide li {
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  font-size: 1.8em;
+  font-weight: 300;
+}
+
+.main {
+  padding: 2em;
+  margin-top: 3em;
+  text-align: left;
+  width: 100%;
+}
+
+#spinner {
+  margin: 0 auto;
+}
+
+.info p{
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 3em;
+}
+
+.tides-section {
+  margin-bottom: 3em;
+}
+/*
+.type-text {
+  font-weight: 400;
+}
+
+.info {
+  padding: 0 10px 0 10px;
+  font-size: 120%;
+  font-weight: 200;
+}
+
+.end {
+  font-weight: 400;
+  font-size: 150%;
+  text-transform: uppercase;
+}*/

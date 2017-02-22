@@ -10,21 +10,36 @@ function getTides(lat, lon) {
       while (tidesNode.firstChild) {
           tidesNode.removeChild(tidesNode.firstChild);
       };
-        
+
+      var spinner = document.getElementById('spinner');
+      spinner.style.display = 'none';
+
       extremes.map((extreme) => {
         extreme.date = moment(extreme.date).format('ddd  hh:mm');
 
+        var ul = document.createElement('ul');
+        ul.className  = 'tide';
+        var liOuter = document.createElement('li');
+
+        var image = document.createElement('img');
         if (extreme.type === 'High') {
-          extreme.isHigh =  true
+          image.src  =  '/assets/img/arrow-up-right.svg';
         } else {
-          extreme.isHigh = false
+          image.src =  '/assets/img/arrow-down-right.svg';
         }
 
-        var li = document.createElement('li');
-        li.innerText=extreme.isHigh + ' ' + extreme.height + ' ' + extreme.date;
-        li.id = extreme.dt;
-        tides.appendChild(li);
+        var liImage = document.createElement('li');
+        liImage.appendChild(image);
+        ul.appendChild(liImage);
+        var liType = document.createElement('li');
+        ul.appendChild(liType);
+        liType.innerText = extreme.height;
+        var liDate =document.createElement('li');
+        liDate.innerText = extreme.date;
+        ul.appendChild(liDate);
 
+        liOuter.appendChild(ul);
+        tides.appendChild(liOuter);
         return extreme;
       })
       console.log(extremes);

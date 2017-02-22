@@ -2,31 +2,61 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tidechecker</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="/assets/styles/master.css">
+    <!-- <link rel="stylesheet" href="/assets/styles/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/styles/spinner.css">
   </head>
   <body>
-    <h1>Tidechecker</h1>
+    <div class='container-fluid'>
+      <div class='tide-checker'>
+        <h1>Tidechecker</h1>
 
-    <input type="text" id="txtPlaces" style="width: 250px" placeholder="Enter a location" />
+          <input type="text" id="txtPlaces"  placeholder="Enter a location" />
 
-    <p>Location name: <span id='location_name'></span></p>
-    <p>Location: <span id='location'></span></p>
-    <p>Lat: <span id='lat'></span></p>
-    <p>Lon: <span id='lon'></span></p>
+          <div class='row main'>
+              <div class='col-sm-3 col-xs-12 info'>
+                <p>
+                  Do you surf, fish, sail, dive or just want to hang at the beach? Then it might be a good idea to check the tides to see if it's any idea at all to go there!
+                  <br>
+                  The data is a forecast and just like any forecast it can be right or wrong. Pleas use it as an indication and whenever possible check with the life guards or harbour staff before heading out in the water.
+                    <br>
+                    We take absolutely no responsibility for any damages that might occure.
+                </p>
+                <p class='end'>
+                  Have fun!
+                </p>
 
-    <ul id='tides'>
-    </ul>
+              </div>
 
-      <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js'></script>
-      <script src='/assets/js/tides.js'></script>
-      <script src="/assets/js/autocomplete.js"></script>
-      <script src="/assets/js/geolocation.js">
+  	          <div class='col-sm-6 col-xs-12 tides-section'>
+                <div id="spinner" class='spinner'>
+                  <div class="rect1"></div>
+                  <div class="rect2"></div>
+                  <div class="rect3"></div>
+                  <div class="rect4"></div>
+                  <div class="rect5"></div>
+                </div>
 
-  </script>
+                <ul id='tides'></ul>
+              </div>
 
+            <div class='col-sm-3 col-xs-12'>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+          </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js'></script>
+    <script src='/assets/js/tides.js'></script>
+    <script src="/assets/js/autocomplete.js"></script>
+    <script src="/assets/js/geolocation.js"></script>
   </body>
 </html>
