@@ -34,6 +34,7 @@ function getTides(lat, lon) {
 
         var liType = document.createElement('li');
         liType.innerText = extreme.type;
+        liType.className = 'type';
         ul.appendChild(liType);
 
         var liHeight = document.createElement('li');

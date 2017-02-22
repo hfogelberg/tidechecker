@@ -24,34 +24,39 @@ body, html {
   background-position: center;
 }
 
-.tide-checker {
+.container-fluid {
   height: 100vh;
-  padding: 10px;
+  padding: 0.5em;
 }
 
 h1 {
   text-align: center;
-  font-size: 5em;
-  letter-spacing: 2px;
-  word-spacing: 4px;
-  margin-bottom: 20px;
+  font-size: 4.5em;
+  letter-spacing: 0.1em;
   color: #d35400;
+  margin-bottom: 0.5em;
+  width: 80vw;
 }
 
 input {
   display: block;
   margin: 0 auto;
-  width: 80%;
-  padding: 10px;
+  width: 80vw;
+  padding: 0.6em;
   border-radius: 20px;
-  height: 60px;
-  font-size: 40px;
+  height: 2.5em;
+  font-size: 2em;
   font-weight: lighter;
   color: #34495e;
+  margin-bottom: 1.5em;
 }
 
 input.placeholder {
     text-align: center;
+}
+
+ul.tide {
+  width: 100%;
 }
 
 #tides li{
@@ -67,12 +72,24 @@ input.placeholder {
   justify-content: space-between;
   margin-bottom: 0.5em;
   font-size: 1.8em;
-  font-weight: 300;
+  font-weight: 400;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  .tide li {
+    font-size: 1.2em;
+    border-bottom solid
+  }
 }
 
 .main {
-  padding: 2em;
-  margin-top: 3em;
+  padding: 0.8em;
   text-align: left;
   width: 100%;
 }
@@ -95,19 +112,3 @@ input.placeholder {
 .tides-section {
   margin-bottom: 3em;
 }
-/*
-.type-text {
-  font-weight: 400;
-}
-
-.info {
-  padding: 0 10px 0 10px;
-  font-size: 120%;
-  font-weight: 200;
-}
-
-.end {
-  font-weight: 400;
-  font-size: 150%;
-  text-transform: uppercase;
-}*/

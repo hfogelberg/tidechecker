@@ -13,47 +13,43 @@
   </head>
   <body>
     <div class='container-fluid'>
-      <div class='tide-checker'>
-        <h1>Tidechecker</h1>
+      <div class='row main'>
+        <div class='col-xs-12 col-sm-12'>
+          <h1>Tidechecker</h1>
 
           <input type="text" id="txtPlaces"  placeholder="Enter a location" />
 
-          <div class='row main'>
-              <div class='col-sm-3 col-xs-12 info'>
-                <p>
-                  Do you surf, fish, sail, dive or just want to hang at the beach? Then it might be a good idea to check the tides to see if it's any idea at all to go there!
-                  <br>
-                  The data is a forecast and just like any forecast it can be right or wrong. Pleas use it as an indication and whenever possible check with the life guards or harbour staff before heading out in the water.
-                    <br>
-                    We take absolutely no responsibility for any damages that might occure.
-                </p>
-                <p class='end'>
-                  Have fun!
-                </p>
-
-              </div>
-
-  	          <div class='col-sm-6 col-xs-12 tides-section'>
-                <div class = 'spinner-container' >
-                  <div class='spinner' id='spinner'>
-                    <div class="rect1"></div>
-                    <div class="rect2"></div>
-                    <div class="rect3"></div>
-                    <div class="rect4"></div>
-                    <div class="rect5"></div>
-                  </div>
-                </div>
-
-                <ul id='tides'></ul>
-              </div>
-
-            <div class='col-sm-3 col-xs-12'>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+          <div class='col-sm-3 col-xs-12'>
           </div>
-        </div>
+
+          <div class='col-sm-6 col-xs-12 tides-section'>
+            <div class = 'spinner-container' >
+              <div class='spinner' id='spinner'>
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+              </div>
+            </div>
+
+            <ul id='tides'></ul>
+          </div>
+
+        <div class='col-sm-3 col-xs-12 info'>
+          <p>
+            Do you surf, fish, sail, dive or just want to hang at the beach? Then it might be a good idea to check the tides to see if it's any idea at all to go there!
+            <br>
+            The data is a forecast and just like any forecast it can be right or wrong. Pleas use it as an indication and whenever possible check with the life guards or harbour staff before heading out in the water.
+              <br>
+              We take absolutely no responsibility for any damages that might occure.
+          </p>
+          <p class='end'>
+            Have fun!
+          </p>
+      </div>
     </div>
+
     <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js'></script>
