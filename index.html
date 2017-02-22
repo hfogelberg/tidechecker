@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tidechecker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/assets/styles/master.css">
+  </head>
+  <body>
+    <h1>Tidechecker</h1>
+
+    <input type="text" id="txtPlaces" style="width: 250px" placeholder="Enter a location" />
+
+    <p>Location name: <span id='location_name'></span></p>
+    <p>Location: <span id='location'></span></p>
+    <p>Lat: <span id='lat'></span></p>
+    <p>Lon: <span id='lon'></span></p>
+
+    <ul id='tides'>
+    </ul>
+
+      <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js'></script>
+      <script src='/assets/js/tides.js'></script>
+      <script src="/assets/js/autocomplete.js"></script>
+      <script src="/assets/js/geolocation.js">
+
+  </script>
+
+  </body>
+</html>
