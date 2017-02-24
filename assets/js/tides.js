@@ -1,5 +1,4 @@
 function getTides(lat, lon) {
-  alert('getTides')
   let key = "f1c67376-3200-41db-86c3-8334b6f81106"
   const url = `https://www.worldtides.info/api?extremes&lat=${lat}&lon=${lon}&key=${key}`
   console.log(url);
