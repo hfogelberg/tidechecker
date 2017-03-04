@@ -15,7 +15,7 @@ function getTides(lat, lon) {
       spinner.style.display = 'none';
 
       extremes.map((extreme) => {
-        extreme.date = moment(extreme.date).format('ddd  hh:mm');
+        extreme.date = moment(extreme.date).format('ddd  HH:mm');
 
         var ul = document.createElement('ul');
         ul.className  = 'tide';
