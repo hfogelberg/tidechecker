@@ -42,7 +42,6 @@ if (navigator.geolocation) {
           }
       });
     }, function (error) {
-      alert('Error ' + error)
     }, {
             enableHighAccuracy: true,
             timeout: 30 * 1000,        // 30 secs
