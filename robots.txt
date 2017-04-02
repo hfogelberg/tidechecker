@@ -1,0 +1,6 @@
+User-Agent: *
+Disallow: 
+Allow: /tidechecker.com
+
+Sitemap: https://tidechecker.com/sitemap.xml
+
