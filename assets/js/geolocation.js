@@ -8,7 +8,7 @@ if (navigator.geolocation) {
       var spinner = document.getElementById('spinner');
       spinner.style.display = 'inline-block';
 
-      navigator.geolocation.watchPosition(function (position) {
+      id = navigator.geolocation.watchPosition(function (position) {
         var coords = position.coords;
         var geocoder = new google.maps.Geocoder();
         var pos = new google.maps.LatLng(coords.latitude, coords.longitude);
@@ -18,6 +18,7 @@ if (navigator.geolocation) {
 
         geocoder.geocode({'latLng': pos}, function (results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
+            navigator.geolocation.clearWatch(id);
             let addressComponents = results[0].address_components
             if (addressComponents) {
               addressComponents.forEach((component)=>{
