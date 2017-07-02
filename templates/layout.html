@@ -1,0 +1,27 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tidechecker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/styles/reset.css">
+    <link rel="stylesheet" href="/public/styles/master.css">
+    </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="/"><h1>Tidechecker</h1></a></li>
+        <li><a href="/about">About</a></a>
+      </ul>
+    </header>
+    <div class="container">
+    {{template "content" .}}
+    </div>
+  </body>
+
+  <script src="/public/scripts/geolocation.js"></script>
+  <script src="//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBKz2rPCqEm4XguOun_Jn8Ts4EOFSoT9MU&libraries=places"></script>
+  <script src="/public/scripts/autocomplete.js"></script>
+</html>
+{{end}}
