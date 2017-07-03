@@ -1,3 +1,18 @@
+.search-location {
+  margin-bottom: 0.8em;
+  background-color: yellowgreen;
+  display: flex;
+  flex-direction: row;
+}
+
+.search-location.search {
+  flex: 0.8;
+}
+
+.tides-gps {
+  flex: 0.2;
+}
+
 .tides {
   margin-left: 10vw;
   width: 60vw;
@@ -12,6 +27,7 @@
 }
 
 .tides-item {
+  font-size: 1.3em;
   line-height: 2.4em;
   margin-bottom: 0.2em;
   display: flex;
