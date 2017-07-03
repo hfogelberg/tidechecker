@@ -1,9 +1,12 @@
 {{define "content"}}
+
   <div class="index">
     <h1>Where are you?</h1>
 
-    <input type="search"  placeholder="Search" id="search" onfocus="value = ''"/>
-    <p class="or">OR</p>
-    <button type="button" class="gps" onclick="getLocation()">Find My Location</button>
+    <div class="index-content">
+      <input type="search"  placeholder="Search" id="search" class="search" onfocus="value = ''"/>
+      <p class="or">OR</p>
+      <button type="button" class="gps" onclick="getLocation()">Find My Location</button>
+    </div>
   </div>
 {{end}}

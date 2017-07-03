@@ -1,0 +1,49 @@
+.index {
+  width: 80vw;
+  margin-left: 10vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.index h1 {
+  flex: 0.2;
+  text-align: center;
+}
+
+.index-content {
+  flex: 0.8;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  text-align: center;
+}
+
+.search {
+  height: 2em;
+  line-height: 2em;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.8em;
+  width: 80%;
+  margin-top: 1.8em;
+}
+
+.or {
+  margin-top: 1em;
+  font-size: 2.8em;
+  font-weight: 400;
+}
+
+button.gps {
+  margin-top: 1.5em;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 1.2em 3em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 20px;
+}

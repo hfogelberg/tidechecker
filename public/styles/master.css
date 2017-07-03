@@ -1,4 +1,5 @@
 html, body {
+  font-family: 'Lato', 'Arial', sans-serif;
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
@@ -19,7 +20,7 @@ header {
   line-height: 10vh;
   position: fixed;
   top:0;
-  width: 100%;
+  width: 100vw;
   background-color:rgba(52, 73, 94,0.6);
 }
 
@@ -34,7 +35,8 @@ h1 {
 }
 
 h2 {
-  margin-top: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   text-align: center;
   font-size: 1.8em;
 }

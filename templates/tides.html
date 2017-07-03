@@ -2,10 +2,14 @@
   <div class="tides">
     <h2>{{.Station}}</h2>
 
-    <ul>
+    <ul class='tides-list'>
       {{range .Extremes}}
-        <li>
-          {{timeToHour .Dt}} | <img src="/public/img/{{typeToImg .Type}}" stye="heigh: 80px;"> | {{roundHeight .Height}} <br>
+        <li class='tides-item'>
+          <span class="dt-text">{{timeToHour .Dt}} </span>
+          <img src="/public/img/{{typeToImg .Type}}">
+          <span class="type-text">{{.Type}}</span>
+          <span class="height-text">{{roundHeight .Height}}</span>
+          <br>
         </li>
       {{end}}
     </ul>
