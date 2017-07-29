@@ -1,6 +1,11 @@
 
 function getLocation() {
   if (navigator.geolocation) {
+    var ic = document.getElementById('index-content');
+    ic.style.display = 'none';
+    var spinner = document.getElementById('spinner-container');
+    spinner.style.display = 'inline-block';
+
       navigator.geolocation.getCurrentPosition(function(position) {
         console.log(position);
         var lat = position.coords.latitude;
