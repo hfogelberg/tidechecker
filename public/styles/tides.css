@@ -1,22 +1,17 @@
-.search-location {
-  margin-bottom: 0.8em;
-  background-color: yellowgreen;
-  display: flex;
-  flex-direction: column;
-}
-
-.search-location.search {
-  flex: 0.8;
-}
-
-.tides-gps {
-  flex: 0.2;
-}
-
 .tides {
   margin-left: 10vw;
   width: 60vw;
-  height: 70vh;
+  height: 100vh;;
+}
+
+.search-location {
+  margin-bottom: 0.8em;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 4em;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .tides-list {

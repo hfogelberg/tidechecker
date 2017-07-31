@@ -1,8 +1,10 @@
 {{define "content"}}
   <div class="tides">
     <div class="search-location">
-      <input type="search"  placeholder="Search" id="search" class="search" onfocus="value = ''" value="{{.Station}}"/>
-      <span><button type="button" class="tides-gps" onclick="getLocation()"><img src="/public/img/gps.svg"></button></span>
+      <div class="search-container">
+        <input type="search"  placeholder="Search" id="search" class="search" onfocus="value = ''" value="{{.Station}}"/>
+        <span><button type="button" class="tides-gps" onclick="getLocation()"><img src="/public/img/gps.svg"></button></span>
+      </div>
     </div>
 
 
@@ -17,5 +19,15 @@
         </li>
       {{end}}
     </ul>
+
+    <div id = 'spinner-container' class = 'spinner-container'>
+      <div class='spinner' id='spinner'>
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
   </div>
 {{end}}

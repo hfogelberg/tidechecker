@@ -18,6 +18,7 @@
   justify-content: center;
   align-items: space-between;
   text-align: center;
+  padding-top: 1.8em;
 }
 
 .search {
@@ -26,8 +27,7 @@
   border-radius: 20px;
   text-align: center;
   font-size: 1.8em;
-  width: 80%;
-  margin-top: 1.8em;
+  width: 50vw;
 }
 
 .or {
