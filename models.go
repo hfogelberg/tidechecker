@@ -1,15 +1,14 @@
 package main
 
 type Tides struct {
-	Station			string 	`json:"station"`
-	Status      int     `json:"status"`
+	Station     string  `json:"station"`
 	CallCount   int     `json:"callCount"`
-	RequestLat  string  `json:"requestLat"`
-	RequestLon  string  `json:"requestLon"`
+	Copyright   string  `json:"copyright"`
+	RequestLat  float64 `json:"requestLat"`
+	RequestLon  float64 `json:"requestLon"`
 	ResponseLat float64 `json:"responseLat"`
 	ResponseLon float64 `json:"responseLon"`
 	Atlas       string  `json:"atlas"`
-	Copyright   string  `json:"copyright"`
 	Extremes    []struct {
 		Dt     int     `json:"dt"`
 		Date   string  `json:"date"`

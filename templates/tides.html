@@ -1,13 +1,5 @@
 {{define "content"}}
   <div class="tides">
-    <div class="search-location">
-      <div class="search-container">
-        <input type="search"  placeholder="Search" id="search" class="search" onfocus="value = ''" value="{{.Station}}"/>
-        <span><button type="button" class="tides-gps" onclick="getLocation()"><img src="/public/img/gps.svg"></button></span>
-      </div>
-    </div>
-
-
     <ul class='tides-list'>
       {{range .Extremes}}
         <li class='tides-item'>

@@ -33,10 +33,11 @@ func tidesHandler(w http.ResponseWriter, r *http.Request) {
 
 	tides, err := getTides(lat, lon)
 	if err != nil {
-		log.Println(err)
+		log.Printf("Error getting tides %s\n", err.Error())
+		return
 	}
 
-	fmt.Println(tides.Extremes)
+	fmt.Println(tides)
 
 	name, err := reverseGeocode(lat, lon)
 	log.Println("*** NAME: " + name + " ***")
@@ -45,8 +46,8 @@ func tidesHandler(w http.ResponseWriter, r *http.Request) {
 	tpl, err := template.New("").Funcs(fm).ParseFiles("templates/tides.html", "templates/layout.html")
 	err = tpl.ExecuteTemplate(w, "layout", tides)
 	if err != nil {
-		log.Fatalln(err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Printf("Error displaying tides %s\n", err.Error())
+		return
 	}
 }
 
@@ -54,7 +55,7 @@ func aboutHandler(w http.ResponseWriter, r *http.Request) {
 	tpl, err := template.New("").ParseFiles("templates/about.html", "templates/layout.html")
 	err = tpl.ExecuteTemplate(w, "layout", nil)
 	if err != nil {
-		log.Fatalln(err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Printf("Error displaying about %s\n", err.Error())
+		return
 	}
 }
