@@ -12,14 +12,23 @@
     <link rel="stylesheet" href="/public/styles/index.css">
     <link rel="stylesheet" href="/public/styles/tides.css">
     <link rel="stylesheet" href="/public/styles/spinner.css">
+    <link rel="stylesheet" href="/public/styles/slideMenu.css">
     </head>
   <body>
     <header>
       <ul>
+        <li><button class='hamburger' onclick="openNav()">&#9776;</button></li>
         <li><a href="/"><h1>Tidechecker</h1></a></li>
-        <li><a href="/about">About</a></a>
       </ul>
     </header>
+
+    <div class="sidenav" id="sidenav">
+      <button onclick="closeNav()" class="btnclose">X</button>
+      <a href="/">Search</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
     <div class="container">
     {{template "content" .}}
     </div>
@@ -28,5 +37,6 @@
   <script src="/public/scripts/geolocation.js"></script>
   <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBKz2rPCqEm4XguOun_Jn8Ts4EOFSoT9MU&libraries=places"></script>
   <script src="/public/scripts/autocomplete.js"></script>
+  <script src="/public/scripts/slideMenu.js"></script>
 </html>
 {{end}}

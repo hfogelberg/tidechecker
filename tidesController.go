@@ -20,7 +20,6 @@ func getTides(lat string, lon string) (*Tides, error) {
 		return nil, err
 	}
 
-	// req.Header.Set("Accept-Encoding", "gzip")
 	client := &http.Client{}
 	res, err := client.Do(req)
 	if err != nil {
@@ -39,6 +38,5 @@ func getTides(lat string, lon string) (*Tides, error) {
 		return nil, err
 	}
 
-	fmt.Println(tides.Copyright)
 	return tides, nil
 }

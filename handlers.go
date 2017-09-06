@@ -37,10 +37,7 @@ func tidesHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Println(tides)
-
 	name, err := reverseGeocode(lat, lon)
-	log.Println("*** NAME: " + name + " ***")
 	tides.Station = name
 
 	tpl, err := template.New("").Funcs(fm).ParseFiles("templates/tides.html", "templates/layout.html")
@@ -58,4 +55,8 @@ func aboutHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error displaying about %s\n", err.Error())
 		return
 	}
+}
+
+func faviconHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/favicon.ico")
 }
