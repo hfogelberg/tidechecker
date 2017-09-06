@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -59,4 +58,13 @@ func aboutHandler(w http.ResponseWriter, r *http.Request) {
 
 func faviconHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/favicon.ico")
+}
+
+func contactHandler(w http.ResponseWriter, r *http.Request) {
+	tpl, err := template.New("").ParseFiles("templates/contact.html", "templates/layout.html")
+	err = tpl.ExecuteTemplate(w, "layout", nil)
+	if err != nil {
+		log.Printf("Error displaying about %s\n", err.Error())
+		return
+	}
 }

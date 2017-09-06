@@ -12,6 +12,7 @@ func main() {
 	router.HandleFunc("/", indexHandler).Methods("GET")
 	router.HandleFunc("/tides/{lat}/{lon}", tidesHandler).Methods("GET")
 	router.HandleFunc("/about", aboutHandler).Methods("GET")
+	router.HandleFunc("/contact", contactHandler).Methods("GET")
 	router.HandleFunc("/favicon.ico", faviconHandler)
 
 	mux := http.NewServeMux()
