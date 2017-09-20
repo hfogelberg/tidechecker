@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 	"github.com/urfave/negroni"
@@ -23,5 +24,14 @@ func main() {
 
 	n := negroni.Classic()
 	n.UseHandler(mux)
-	http.ListenAndServe(":3000", n)
+	port := getEnv("PORT", ":80")
+	http.ListenAndServe(port, n)
+}
+
+func getEnv(key, defaultValue string) string {
+	value := os.Getenv(key)
+	if len(value) == 0 {
+		return defaultValue
+	}
+	return value
 }

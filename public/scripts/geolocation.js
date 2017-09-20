@@ -6,7 +6,7 @@ function getLocation() {
     ic.style.display = 'none';
     ie.style.display = 'none';
     var spinner = document.getElementById('spinner-container');
-    spinner.style.display = 'inline-block';
+    spinner.style.display = 'block';
 
       navigator.geolocation.getCurrentPosition(function(position) {
         console.log(position);
