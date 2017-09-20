@@ -7,18 +7,17 @@
   flex-direction: column;
 }
 
-.index h1 {
-  flex: 0.2;
-  text-align: center;
-}
-
 .index-content {
   flex: 0.8;
   flex-direction: column;
   justify-content: center;
   align-items: space-between;
   text-align: center;
-  padding-top: 1.8em;
+}
+
+.index-content > h1 {
+  margin-bottom: 0.8em;
+  text-align: center;
 }
 
 .search {
@@ -32,7 +31,7 @@
 
 .or {
   margin-top: 1em;
-  font-size: 2.8em;
+  font-size: 1.8em;
   font-weight: 400;
 }
 

@@ -2,9 +2,7 @@
 function getLocation() {
   if (navigator.geolocation) {
     var ic = document.getElementById('index-content');
-    var ie = document.getElementById('index-title');
     ic.style.display = 'none';
-    ie.style.display = 'none';
     var spinner = document.getElementById('spinner-container');
     spinner.style.display = 'block';
 
