@@ -1,0 +1,13 @@
+{
+  "name": "Tidechecker",
+  "short_name": "Tidechecker",
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "ecf0f1",
+  "theme_color": "rgba(52, 73, 94,0.4)",
+  "description": "Tide forecasts for wherever you are",
+  "dir": "ltr",
+  "lang": "en-US",
+  "orientation": "portrait-primary",
+}
