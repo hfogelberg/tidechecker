@@ -5,39 +5,39 @@
     <title>Tidechecker</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link rel="stylesheet" href="/public/styles/reset.css">
     <link rel="stylesheet" href="/public/styles/master.css">
     <link rel="stylesheet" href="/public/styles/spinner.css">
     <link rel="stylesheet" href="/public/styles/slideMenu.css">
-    <link rel="manifest" href="/public/manifest.json">
     </head>
   <body>
-    <header>
-      <div class="brand">
-        <button class='hamburger' onclick="openNav()">
-          <img src="/public/img/menu.svg">
-        </button>
-        <a href="/"><h1>Tidechecker</h1></a>
+    <div class="page">
+      <header>
+        <div class="brand">
+          <button class='hamburger' onclick="openNav()">
+            <img src="/public/img/menu.svg">
+          </button>
+          <a href="/"><h1>Tidechecker</h1></a>
+        </div>
+      </header>
+
+      <div class="sidenav" id="sidenav">
+        <button onclick="closeNav()" class="btnclose">X</button>
+        <a href="/">Search</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
       </div>
-    </header>
 
-    <div class="sidenav" id="sidenav">
-      <button onclick="closeNav()" class="btnclose">X</button>
-      <a href="/">Search</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
+      <div class="container">
+        {{template "content" .}}
+      </div>
+
+      <footer>
+        Designed and developed by <a href="https://henrikfogelberg.com" target="_blank">Henrik Fogelberg</a> icons by <a href="https://https://icons8.com">Icons8</a>.
+      </footer>
     </div>
-
-    <div class="container">
-    {{template "content" .}}
-    </div>
-
-    <footer class="footer">
-      Designed and developed by <a href="https://golizzard.com" target="_blank">Golizzard</a> icons by <a href="https://https://icons8.com">Icons8</a>.
-
-    </footer>
   </body>
 
   <script src="/public/scripts/geolocation.js"></script>

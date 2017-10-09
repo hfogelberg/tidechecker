@@ -1,5 +1,11 @@
+const mq = window.matchMedia("(min-width: 601px)");
+
 function openNav() {
-  document.getElementById('sidenav').style.width = "25%";
+  if (mq.matches) {
+    document.getElementById('sidenav').style.width = "25%";
+  } else {
+    document.getElementById('sidenav').style.width = "50%";
+  }
 }
 
 function closeNav() {
