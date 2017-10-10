@@ -1,5 +1,24 @@
 {{define "content"}}
-  <div class="tides">
+  <table class="tides">
+    <tr>
+      <th>
+        <td class="header-date"></td>
+        <td class="header-img"></td>
+        <td class="header-type"></td>
+        <td class="header-height"></td>
+      </th>
+    </tr>
+    {{range .Extremes}}
+      <tr class="tides-item">
+        <td class="dt-text">{{timeToHour .Dt}}</td>
+        <td><img src="/public/img/{{typeToImg .Type}}"></td>
+        <td class="type-text">{{.Type}}</td>
+        <td class="height-text">{{roundHeight .Height}}</td>
+      </tr>
+
+    {{end}}
+  </table>
+  <!-- <div class="tides">
     <ul class='tides-list'>
       {{range .Extremes}}
         <li class='tides-item'>
@@ -10,6 +29,6 @@
           <br>
         </li>
       {{end}}
-    </ul>
+    </ul> -->
   </div>
 {{end}}
